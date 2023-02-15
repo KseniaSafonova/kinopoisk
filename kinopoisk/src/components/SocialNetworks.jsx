@@ -4,7 +4,7 @@ function SocialNetworks() {
     return (
         <section className={styles.socialNetworks}>
             <div>Фильмы</div>
-            <div>Поделиться: Соц сети</div>
+            <div className={styles.icons}>Поделиться: Соц сети</div>
         </section>
     )
 }

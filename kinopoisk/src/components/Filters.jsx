@@ -10,7 +10,7 @@ function Filters() {
                 <button className={styles.filterButton}>Годы выхода<IoIosArrowDown /></button>
             </section>
             <section className={styles.filtersRightSection}>
-                <span>Бесплатно</span>
+                <div>Бесплатно</div>
                 <label className={styles.switch}>
                     <input type="checkbox" className={styles.checkbox} />
                     <span className={styles.slider}></span>

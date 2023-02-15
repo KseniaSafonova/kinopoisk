@@ -1,6 +1,5 @@
 .filtersContainer {
     display: flex;
-    border: 1px solid red;
     margin-top: 40px;
     margin-left: 30px;
 }
@@ -12,7 +11,11 @@
 .filtersRightSection {
     display: flex;
     align-items: center;
-    margin-left: 300px;
+    margin-left: 500px;
+}
+
+.filtersRightSection div {
+    margin-right: 10px;
 }
 
 .filterButton {
@@ -52,7 +55,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #BDBDBD;
+    background-color: rgb(85, 83, 83);
     -webkit-transition: .4s;
     transition: .4s;
 }

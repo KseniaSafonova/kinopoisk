@@ -1,6 +1,9 @@
 .socialNetworks {
     display: flex;
-    justify-content: space-between;
     margin-left: 40px;
     margin-top: 40px;
+}
+
+.icons {
+    margin-left: 1000px;
 }
