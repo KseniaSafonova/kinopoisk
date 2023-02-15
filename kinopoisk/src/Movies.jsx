@@ -1,11 +1,7 @@
-import { useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import { fetchMovies } from "./store/movieSlice";
 
-function Movies() {
+function Movies({ movies }) {
 
-    const dispatch = useDispatch();
-
+    console.log(movies)
     // const fetchMovies = () => {
 
     //     fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/301', {
@@ -20,16 +16,20 @@ function Movies() {
     //         .then(json => console.log(json.nameRu))
     //         .catch(err => console.log(err))
     // }
-
-
-
-
-    useEffect(() => {
-        // fetchMovies()
-        dispatch(fetchMovies())
-    }, [])
     return (
-        <></>
+        <>
+
+            {/* <div>{movies.nameRu}</div> */}
+            {/* {
+                    movies.map((n: any) =>
+                        <Card
+                            image={require('../../images' + n.image)}
+                            id={n.id}
+                            title={n.title}
+                            descriptionShort={n.descriptionShort}
+                            date={n.date} />)
+                } */}
+        </>
     )
 }
 

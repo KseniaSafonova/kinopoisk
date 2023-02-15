@@ -10,8 +10,6 @@ export const fetchMovies = createAsyncThunk(
     'movies/fetchMovies',
     async function () {
         const response = await
-            // fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/301');
-
             fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/301', {
                 method: 'GET',
                 headers: {
@@ -34,7 +32,7 @@ const movieSlice = createSlice({
     reducers: {
     },
     extraReducers: {
-        [fetchMovies.pending]: (state, action) => {
+        [fetchMovies.pending]: (state) => {
             state.status = 'loading';
         },
         [fetchMovies.fulfilled]: (state, action) => {
