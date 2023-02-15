@@ -1,7 +1,8 @@
+import styles from './styles/Movies.module.css'
 
 function Movies({ movies }) {
 
-    console.log(movies)
+
     // const fetchMovies = () => {
 
     //     fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/301', {
@@ -16,8 +17,10 @@ function Movies({ movies }) {
     //         .then(json => console.log(json.nameRu))
     //         .catch(err => console.log(err))
     // }
+
+    console.log(movies)
     return (
-        <>
+        <div className={styles.container}>
 
             {/* <div>{movies.nameRu}</div> */}
             {/* {
@@ -29,7 +32,7 @@ function Movies({ movies }) {
                             descriptionShort={n.descriptionShort}
                             date={n.date} />)
                 } */}
-        </>
+        </div>
     )
 }
 

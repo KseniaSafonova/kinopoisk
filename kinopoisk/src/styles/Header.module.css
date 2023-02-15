@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid red;
+    margin-left: 40px;
+}
+
+.leftBlock,
+.rightBlock {
+    display: flex;
+    /* justify-content: space-between; */
+    border: 1px solid red;
+}
+
+.rightBlock {
+    width: 500px;
+    margin-left: 200px;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid red;
+    width: 500px;
+    color: lightgray;
+    margin-left: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+.headerButton {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgb(49, 13, 83);
+    background-color: rgb(49, 13, 83);
+    color: #FFFF;
+    margin-left: 40px;
+
+}
+
+.search {
+    border-right: 1px solid gray;
+    width: 80px;
+}
+
+.addPromo {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+.LogIn {
+    margin-left: 40px;
+}
