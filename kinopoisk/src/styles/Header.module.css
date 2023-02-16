@@ -29,8 +29,13 @@
     color: lightgray;
 }
 
-.nav a:hover {
-    /*???*/
+.nav a:hover,
+.search:hover {
+    color: #FFFF;
+}
+
+.search {
+    color: lightgray;
 }
 
 .headerButton {
@@ -40,7 +45,10 @@
     background-color: rgb(49, 13, 83);
     color: #FFFF;
     margin-left: 40px;
+}
 
+.headerButton:hover {
+    background-color: rgb(91, 32, 146);
 }
 
 .search {
@@ -51,9 +59,21 @@
 .addPromo {
     margin-left: 20px;
     padding-left: 20px;
+    width: 200px;
     border-left: 1px solid gray;
+    color: lightgray;
+}
+
+.addPromo:hover {
+    color: #FFFF;
 }
 
 .LogIn {
     margin-left: 40px;
+    width: 100px;
+    color: lightgray;
+}
+
+.LogIn:hover {
+    color: #FFFF;
 }

@@ -1,4 +1,7 @@
 import styles from './../styles/Header.module.css';
+import { BiSearch } from 'react-icons/bi';
+import { FiGift } from 'react-icons/fi';
+import { BiUserCircle } from 'react-icons/bi'
 
 function Header() {
     return (
@@ -14,10 +17,10 @@ function Header() {
                 </nav>
             </div>
             <div className={styles.rightBlock}>
-                <div className={styles.search}>Поиск</div>
+                <div className={styles.search}><BiSearch size='1.5em' className={styles.search} /></div>
                 <button className={styles.headerButton}>Месяц за 1Р</button>
-                <div className={styles.addPromo}>Ввести промокод</div>
-                <div className={styles.LogIn}>Войти</div>
+                <div className={styles.addPromo}><FiGift size='1.5em' />Ввести промокод</div>
+                <div className={styles.LogIn}><BiUserCircle size='1.5em' />Войти</div>
             </div>
         </header>
     )

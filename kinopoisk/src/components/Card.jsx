@@ -1,10 +1,18 @@
-import styles from './../styles/Card.module.css'
+import styles from './../styles/Card.module.css';
+import {
+    Link
+} from "react-router-dom";
 function Card(props) {
     return (
-        <div className={styles.card}>
-            <div>{props.coverUrl}</div>
-            <div>{props.nameRu}</div>
-        </div>
+
+        <Link
+            to={`${props.id}`}>
+            <div className={styles.card}>
+                <img src={props.image} alt="" className={styles.cardImage} />
+                <div>{props.title}</div>
+            </div>
+        </Link>
+
     )
 }
 

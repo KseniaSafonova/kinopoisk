@@ -29,13 +29,16 @@ export const fetchMovies = createAsyncThunk(
                     // .catch(err => console.log(err))
                     .then(res => { return res.json() })
                     .then(data => {
-
                         array.push(data);
-
                     });
 
-            // console.log(a)
-            return array
+            if (array.length >= 15) {
+                // console.log(array)
+                return array
+            }
+
+
+            // return array
             // const data = response.json();
             // return data;
         }

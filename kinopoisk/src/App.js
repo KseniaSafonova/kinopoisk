@@ -6,7 +6,14 @@ import styles from './App.module.css';
 import Movies from './Movies';
 import Header from "./components/Header";
 import SocialNetworks from './components/SocialNetworks';
-import Filters from './components/Filters'
+import Filters from './components/Filters';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import MoviePage from "./components/MoviePage";
 
 function App() {
   const movies = useSelector((state) => state.movies.movies)
@@ -15,13 +22,20 @@ function App() {
     dispatch(fetchMovies());
   }, [dispatch])
 
+  console.log(movies)
+
   return (
-    <div className={styles.app}>
-      <Header />
-      <SocialNetworks />
-      <Filters />
-      <Movies movies={movies} />
-    </div>
+    <BrowserRouter>
+      <div className={styles.app}>
+        <Header />
+        <SocialNetworks />
+        <Filters />
+        <Movies movies={movies} />
+        <Routes>
+          <Route path='/moviepage/:id' element={<MoviePage movies={movies} />}></Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
