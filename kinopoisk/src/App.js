@@ -14,6 +14,9 @@ import {
   Link
 } from "react-router-dom";
 import MoviePage from "./components/MoviePage";
+// import styles from './styles/Movies.module.css';
+import Card from './components/Card.jsx'
+
 
 function App() {
   const movies = useSelector((state) => state.movies.movies)
@@ -28,8 +31,6 @@ function App() {
     <BrowserRouter>
       <div className={styles.app}>
         <Header />
-        <SocialNetworks />
-        <Filters />
         <Movies movies={movies} />
         <Routes>
           <Route path='/moviepage/:id' element={<MoviePage movies={movies} />}></Route>
