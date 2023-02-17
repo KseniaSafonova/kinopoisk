@@ -17,9 +17,9 @@ function MoviePage({ movies }) {
         setDescription(currentCard[0].description)
     }, [id])
     return (
-        <>
+        <div>
             111
-        </>
+        </div>
     )
 }
 
