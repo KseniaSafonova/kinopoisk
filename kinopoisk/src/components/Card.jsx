@@ -9,7 +9,6 @@ function Card(props) {
             to={`${props.id}`}>
             <div className={styles.card}>
                 <img src={props.image} alt="" className={styles.cardImage} />
-                <div>{props.title}</div>
             </div>
         </Link>
 
