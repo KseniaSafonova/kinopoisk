@@ -4,21 +4,23 @@ import { useState, useEffect, useParams } from "react";
 function MoviePage({ movies }) {
 
     let { id } = useParams();
-    // const [title, setTitle] = useState('');
-    // const [image, setImage] = useState('');
+    const [year, setYear] = useState('');
+    const [genres, setGenres] = useState([]);
+    const [backgroundImage, setBackgroundImage] = useState('');
     const [description, setDescription] = useState('');
 
     useEffect(() => {
         const currentCard = movies.filter((n) => n.id == id);
-        // setDate(currentCard[0].date)
-        // setTitle(currentCard[0].title)
-        // setImage(currentCard[0].bigImage)
+        setYear(currentCard[0].year)
+        setGenres(currentCard[0].genres)
+        setBackgroundImage(currentCard[0].coverUrl)
         setDescription(currentCard[0].description)
     }, [id])
     return (
         <div className={styles.container}>
 
             <div>{description}</div>
+            <div>12345</div>
 
 
             {/* <img src={require('../../images' + image)} className={styles.img} alt="" /> */}

@@ -1,0 +1,19 @@
+.container {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    margin-top: 40px;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border: rgb(59, 59, 59);
+    background-color: rgb(59, 59, 59);
+    color: #FFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 10px;
+}

@@ -3,10 +3,9 @@ import { useDispatch } from 'react-redux';
 import { fetchMovies } from "./store/movieSlice";
 import { useSelector } from 'react-redux';
 import styles from './App.module.css';
-import Movies from './Movies';
+import Movies from './components/Movies';
 import Header from "./components/Header";
-import SocialNetworks from './components/SocialNetworks';
-import Filters from './components/Filters';
+import MainMenu from './components/MainMenu'
 import {
   BrowserRouter,
   Routes,
@@ -14,9 +13,6 @@ import {
   Link
 } from "react-router-dom";
 import MoviePage from "./components/MoviePage";
-// import styles from './styles/Movies.module.css';
-import Card from './components/Card.jsx'
-
 
 function App() {
   const movies = useSelector((state) => state.movies.movies)
@@ -31,9 +27,10 @@ function App() {
     <BrowserRouter>
       <div className={styles.app}>
         <Header />
-        <Movies movies={movies} />
         <Routes>
-          <Route path='/moviepage/:id' element={<MoviePage movies={movies} />}></Route>
+          <Route path='/' element={<MainMenu />}></Route>
+          <Route path='/movies' element={<Movies movies={movies} />}></Route>
+          <Route path='/movies/:id' element={<MoviePage movies={movies} />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,7 +1,7 @@
-import styles from './styles/Movies.module.css';
-import SocialNetworks from './components/SocialNetworks';
-import Filters from './components/Filters';
-import Card from './components/Card.jsx'
+import styles from './../styles/Movies.module.css';
+import SocialNetworks from './SocialNetworks';
+import Filters from './Filters';
+import Card from './Card.jsx'
 
 function Movies({ movies }) {
     console.log(movies)

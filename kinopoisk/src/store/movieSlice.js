@@ -16,14 +16,13 @@ export const fetchMovies = createAsyncThunk(
 
             const response = await
                 fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}`, {
-                    mode: 'no-cors',
                     method: 'GET',
                     headers: {
-                        'X-API-KEY': '3ed264a7-f3f4-4591-88f2-f573b3249c73',
+                        'X-API-KEY': 'f2ad38e4-47e0-484a-a81e-d05a0e77f1bd',
                         'Content-Type': 'application/json',
                     },
                 })
-                    .then(res => { return res.json() })
+                    .then(res => res.json())
                     .then(data => {
                         array.push(data);
                     });
