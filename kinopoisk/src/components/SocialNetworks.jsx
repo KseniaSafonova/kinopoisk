@@ -3,8 +3,8 @@ import styles from './../styles/SocialNetworks.module.css'
 function SocialNetworks() {
     return (
         <section className={styles.socialNetworks}>
-            <div>Фильмы</div>
-            <div className={styles.icons}>Поделиться: Соц сети</div>
+            <h1>Фильмы</h1>
+            <div className={styles.icons}></div>
         </section>
     )
 }

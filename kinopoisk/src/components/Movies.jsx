@@ -4,8 +4,6 @@ import Filters from './Filters';
 import Card from './Card.jsx'
 
 function Movies({ movies }) {
-    console.log(movies)
-
     return (
         <>
             <SocialNetworks />

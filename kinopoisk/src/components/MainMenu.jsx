@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 function MainMenu() {
     return (
         <div className={styles.container}>
-            <Link to='/movies'><button>Фильмы</button></Link>
-            <button>Сериалы</button>
-            <button>Мультфильмы</button>
-            <button>Фитнес</button>
-            <button>Природа</button>
-            <button>Лекции</button>
-            <button>Кулинария</button>
-            <button>Программы</button>
+            <Link to='/movies'><button className={styles.menuButton}>Фильмы</button></Link>
+            <button className={styles.menuButton}>Сериалы</button>
+            <button className={styles.menuButton}>Мультфильмы</button>
+            <button className={styles.menuButton}>Фитнес</button>
+            <button className={styles.menuButton}>Природа</button>
+            <button className={styles.menuButton}>Лекции</button>
+            <button className={styles.menuButton}>Кулинария</button>
+            <button className={styles.menuButton}>Программы</button>
         </div>
     )
 }

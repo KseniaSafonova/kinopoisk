@@ -12,7 +12,7 @@
 
 .rightBlock {
     width: 500px;
-    margin-left: 150px;
+    margin-left: 100px;
     align-items: center;
 }
 
@@ -39,13 +39,13 @@
 }
 
 .headerButton {
-    width: 150px;
+    width: 250px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid rgb(49, 13, 83);
     background-color: rgb(49, 13, 83);
     color: #FFFF;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 .headerButton:hover {
@@ -53,16 +53,20 @@
 }
 
 .search {
-    border-right: 1px solid gray;
-    width: 80px;
+    width: 70px;
 }
 
 .addPromo {
-    margin-left: 20px;
+    margin-left: 40px;
     padding-left: 20px;
-    width: 200px;
-    border-left: 1px solid gray;
+    width: 350px;
     color: lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.addPromo span {
+    margin-left: 5px;
 }
 
 .addPromo:hover {
@@ -70,9 +74,11 @@
 }
 
 .LogIn {
-    margin-left: 40px;
-    width: 100px;
+    margin-left: 50px;
+    width: 150px;
     color: lightgray;
+    display: flex;
+    align-items: center;
 }
 
 .LogIn:hover {

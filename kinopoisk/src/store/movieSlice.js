@@ -19,6 +19,7 @@ export const fetchMovies = createAsyncThunk(
                     method: 'GET',
                     headers: {
                         'X-API-KEY': 'f2ad38e4-47e0-484a-a81e-d05a0e77f1bd',
+                        // 'X-API-KEY': '3ed264a7-f3f4-4591-88f2-f573b3249c73',
                         'Content-Type': 'application/json',
                     },
                 })
