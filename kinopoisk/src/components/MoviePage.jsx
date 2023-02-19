@@ -29,7 +29,7 @@ function MoviePage({ movies }) {
                 }
             </div> */}
             {/* <div>{description}</div> */}
-            <div>12345</div>
+            <div>Инфо о фильме {id}</div>
         </div>
 
     )
