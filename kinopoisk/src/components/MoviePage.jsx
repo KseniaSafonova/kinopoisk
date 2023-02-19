@@ -21,15 +21,18 @@ function MoviePage({ movies }) {
     // }, [id])
     return (
         <div className={styles.container}>
-            <div className={styles.backgroundImage}><img src={currentMovie[0].coverUrl} alt="" /></div>
-            <div className={styles.year}>{currentMovie[0].year}</div>
-            {/* <div className={styles.genres}>
+            <div className={styles.backgroundImage}><img src={currentMovie[0].posterUrl} alt="" /></div>
+            <div className={styles.movieDescription}>
+                <div className={styles.year}>{currentMovie[0].year}</div>
+                {/* <div className={styles.genres}>
                 {
                     currentMovie[0].genres.map((g) => <div>{g}</div>)
                 }
             </div> */}
-            <div className={styles.description}>{currentMovie[0].description}</div>
+                <div className={styles.description}>{currentMovie[0].description}</div>
+            </div>
         </div>
+
 
     )
 }

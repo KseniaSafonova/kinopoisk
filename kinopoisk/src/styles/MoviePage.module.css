@@ -4,5 +4,11 @@
     height: 100vh;
 }
 
+.backgroundImage {
+    position: absolute;
+    width: 50%;
+}
 
-.backgroundImage {}
+.movieDescription {
+    position: absolute;
+}
