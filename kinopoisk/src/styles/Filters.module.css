@@ -36,6 +36,14 @@
     background-color: rgb(46, 45, 45);
 }
 
+.filtersBlock {
+    position: absolute;
+    margin-top: 50px;
+    background-color: rgb(59, 59, 59);
+    width: 150px;
+    border-radius: 5px;
+}
+
 .switch {
     position: relative;
     display: inline-block;
