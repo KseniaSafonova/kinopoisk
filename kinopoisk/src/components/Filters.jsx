@@ -9,6 +9,9 @@ function Filters() {
                 <button className={styles.filterButton}>Рейтинг<IoIosArrowDown /></button>
                 <button className={styles.filterButton}>Годы выхода<IoIosArrowDown /></button>
             </section>
+            <section>
+
+            </section>
             <section className={styles.filtersRightSection}>
                 <div>Бесплатно</div>
                 <label className={styles.switch}>

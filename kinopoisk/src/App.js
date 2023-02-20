@@ -21,6 +21,8 @@ function App() {
     dispatch(fetchMovies());
   }, [dispatch])
 
+  console.log(movies)
+
   return (
     <BrowserRouter>
       <div className={styles.app}>

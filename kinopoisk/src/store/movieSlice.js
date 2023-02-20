@@ -12,27 +12,31 @@ export const fetchMovies = createAsyncThunk(
 
     async function () {
         let array = [];
-        for (let id = 300; id < 321; id++) {
+        // for (let id = 300; id < 321; id++) {
+        const response = await
+            // fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}`, {
+            fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1`, {
+                method: 'GET',
+                headers: {
+                    'X-API-KEY': 'f2ad38e4-47e0-484a-a81e-d05a0e77f1bd',
+                    // 'X-API-KEY': '3ed264a7-f3f4-4591-88f2-f573b3249c73',
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then(res => res.json())
+                .then(data => {
+                    array = data.films;
+                    // array.push(data);
+                    // console.log(data.films)
+                });
 
-            const response = await
-                fetch(`https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}`, {
-                    method: 'GET',
-                    headers: {
-                        'X-API-KEY': 'f2ad38e4-47e0-484a-a81e-d05a0e77f1bd',
-                        // 'X-API-KEY': '3ed264a7-f3f4-4591-88f2-f573b3249c73',
-                        'Content-Type': 'application/json',
-                    },
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        array.push(data);
-                    });
+        return array
 
-            if (array.length >= 15) {
-                return array
-            }
-        }
+        // if (array.length >= 15) {
+        // return array
+        // }
     }
+    // }
 )
 
 const movieSlice = createSlice({

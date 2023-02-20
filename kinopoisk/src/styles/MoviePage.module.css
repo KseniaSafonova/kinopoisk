@@ -2,13 +2,48 @@
     background-color: black;
     color: #fff;
     height: 100vh;
-}
-
-.backgroundImage {
-    position: absolute;
-    width: 50%;
+    display: flex;
+    color: lightgray;
 }
 
 .movieDescription {
-    position: absolute;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.nameOriginal {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.movieInfo {
+    margin-top: 40px;
+}
+
+.ratingKinopoisk {
+    color: lightgray;
+    background-color: rgb(59, 59, 59);
+    font-weight: bolder;
+    border-radius: 5px;
+    padding-left: 3px;
+    width: 25px;
+}
+
+.genres,
+.year {
+    display: flex;
+    margin-top: 10px;
+}
+
+.mainImage img {
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 40px;
 }

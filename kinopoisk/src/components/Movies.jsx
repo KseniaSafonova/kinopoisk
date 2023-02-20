@@ -1,19 +1,20 @@
 import styles from './../styles/Movies.module.css';
-import SocialNetworks from './SocialNetworks';
+import PageTitle from './PageTitle';
 import Filters from './Filters';
 import Card from './Card.jsx'
 
 function Movies({ movies }) {
+    console.log(movies)
     return (
         <>
-            <SocialNetworks />
+            <PageTitle />
             <Filters />
             <div className={styles.container}>
                 {
                     movies.map((movie) =>
                         <Card
                             image={movie.posterUrl}
-                            id={movie.kinopoiskId}
+                            id={movie.filmId}
                         />
                     )
                 }
