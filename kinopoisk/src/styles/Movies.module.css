@@ -51,9 +51,26 @@
 .filtersBlock {
     position: absolute;
     margin-top: 50px;
+    margin-left: 10px;
     background-color: rgb(59, 59, 59);
-    width: 150px;
+    width: 200px;
     border-radius: 5px;
+}
+
+.filterItem {
+    background-color: rgb(59, 59, 59);
+    width: 200px;
+    height: 40px;
+    color: lightgray;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.filterItem:hover {
+    background-color: rgb(46, 45, 45);
 }
 
 .switch {
@@ -105,4 +122,17 @@
 
 .slider:before {
     border-radius: 50%;
+}
+
+@media (width: 360px) {
+    .moviesContainer {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        border: 1px solid red;
+    }
+
+    .filterButton {
+        display: none;
+    }
 }

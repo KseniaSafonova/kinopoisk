@@ -54,13 +54,13 @@ function Movies({ movies }) {
                     {
                         pressed &&
                         <section className={styles.filtersBlock}>
-                            <input type='button' value='Драма' />
-                            <input type='button' value='Фентези' onClick={ShowFantasy} />
-                            <input type='button' value='Военный' />
-                            <input type='button' value='История'
+                            <input type='button' value='Драма' className={styles.filterItem} onClick={OpenFilters} />
+                            <input type='button' value='Фентези' className={styles.filterItem} onClick={() => { OpenFilters(); ShowFantasy(); }} />
+                            <input type='button' value='Военный' className={styles.filterItem} />
+                            <input type='button' value='История' className={styles.filterItem}
                             // onClick={ShowHistorycal} 
                             />
-                            <input type='button' value='Приключения' />
+                            <input type='button' value='Приключения' className={styles.filterItem} />
                         </section>
                     }
                     <button className={styles.filterButton}>Рейтинг<IoIosArrowDown /></button>

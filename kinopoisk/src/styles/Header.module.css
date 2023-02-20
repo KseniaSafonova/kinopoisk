@@ -2,18 +2,17 @@
     display: flex;
     align-items: center;
     height: 50px;
-    margin-left: 40px;
+    margin-left: 10px;
 }
 
 .leftBlock,
 .rightBlock {
     display: flex;
+    align-items: center;
 }
 
 .rightBlock {
-    width: 500px;
-    margin-left: 100px;
-    align-items: center;
+    margin-left: 200px;
 }
 
 .nav {
@@ -21,7 +20,7 @@
     justify-content: space-around;
     width: 500px;
     color: lightgray;
-    margin-left: 30px;
+    margin-left: 15px;
 }
 
 .nav a {
@@ -38,8 +37,22 @@
     color: lightgray;
 }
 
+.closeInput {
+    fill: lightgray;
+}
+
+.searchActive input {
+    margin-left: 15px;
+    width: 480px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: lightgray;
+}
+
 .headerButton {
-    width: 250px;
+    width: 120px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid rgb(49, 13, 83);
@@ -52,21 +65,16 @@
     background-color: rgb(91, 32, 146);
 }
 
-.search {
-    width: 70px;
-}
-
 .addPromo {
-    margin-left: 40px;
-    padding-left: 20px;
-    width: 350px;
+    margin-left: 30px;
+    width: 180px;
     color: lightgray;
     display: flex;
     align-items: center;
 }
 
 .addPromo span {
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .addPromo:hover {
@@ -74,13 +82,51 @@
 }
 
 .LogIn {
-    margin-left: 50px;
-    width: 150px;
+    margin-left: 30px;
+    width: 100px;
     color: lightgray;
     display: flex;
     align-items: center;
 }
 
+.LogIn span {
+    margin-left: 10px;
+}
+
 .LogIn:hover {
     color: #FFFF;
 }
+
+.burger {
+    display: none;
+}
+
+@media (width: 360px) {
+    .rightBlock {
+        margin-left: 100px;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .headerButton {
+        display: none;
+    }
+
+    .addPromo {
+        display: none;
+    }
+
+    .LogIn span {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+}
+
+/* (width: 768px) */
