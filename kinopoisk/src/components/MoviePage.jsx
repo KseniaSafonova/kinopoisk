@@ -28,7 +28,7 @@ function MoviePage({ movies }) {
                 <div className={styles.movieInfo}>
                     <div className={styles.ratingKinopoisk}>{currentMovie[0].rating}&nbsp;</div>
                     <div className={styles.year}>{currentMovie[0].year}&nbsp; </div>
-                    <div className={styles.genres}>
+                    <div className={styles.genres} className={styles.genresBlock}>
                         {
                             currentMovie[0].genres.map((g) => <div>{g.genre}&nbsp;</div>)
                         }

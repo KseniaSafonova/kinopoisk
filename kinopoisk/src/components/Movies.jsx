@@ -1,6 +1,6 @@
 import styles from './../styles/Movies.module.css';
 import { IoIosArrowDown } from 'react-icons/io';
-import PageTitle from './PageTitle';
+import { IoOptionsOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import Card from './Card.jsx'
 
@@ -38,7 +38,12 @@ function Movies({ movies }) {
 
     return (
         <>
-            <PageTitle />
+            <div className={styles.topBlock}>
+                <section className={styles.pageTitle}>
+                    <h1>Фильмы</h1>
+                </section>
+                <IoOptionsOutline className={styles.filtersMobile} size='1.5em' />
+            </div>
             <section className={styles.filtersContainer}>
                 <section className={styles.filtersLeftSection}>
                     <button className={styles.filterButton} onClick={OpenFilters}>Жанры<IoIosArrowDown /></button>

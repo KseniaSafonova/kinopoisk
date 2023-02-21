@@ -6,7 +6,7 @@ import {
 function Card(props) {
     return (
         <Link
-            to={`${props.id}`}>
+            to={`${props.id}`} className={styles.linkStyle}>
             <div className={styles.card}>
                 <img src={props.image} alt="" className={styles.cardImage} />
             </div>

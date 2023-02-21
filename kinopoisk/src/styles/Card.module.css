@@ -23,3 +23,21 @@
 .card img:hover {
     transform: scale(1.2);
 }
+
+.linkStyle {
+    width: 250px;
+}
+
+@media (width: 360px) {}
+
+@media (width: 768px) {
+    .card {
+        width: 235px;
+        height: 345px;
+    }
+
+    .cardImage {
+        width: 235px;
+    }
+
+}
