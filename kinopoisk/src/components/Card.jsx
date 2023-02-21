@@ -11,7 +11,6 @@ function Card(props) {
                 <img src={props.image} alt="" className={styles.cardImage} />
             </div>
         </Link>
-
     )
 }
 

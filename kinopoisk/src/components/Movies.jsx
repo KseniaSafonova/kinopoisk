@@ -2,9 +2,7 @@ import styles from './../styles/Movies.module.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import PageTitle from './PageTitle';
 import { useState } from 'react';
-import Filters from './Filters';
 import Card from './Card.jsx'
-
 
 
 function Movies({ movies }) {
@@ -18,8 +16,10 @@ function Movies({ movies }) {
     }
 
     const ShowFantasy = () => {
-        fantasySetPressed(!fantasyPressed);
+        fantasySetPressed(true);
+
         let fantasyArray = Object.assign([], array);
+        fantasyArray = []
 
         movies.map((movie) =>
             movie.genres.find((element) => {
@@ -31,19 +31,10 @@ function Movies({ movies }) {
         setMovies(fantasyArray)
     }
 
-    // const ShowHistorycal = () => {
-    //     fantasySetPressed(!fantasyPressed);
-    //     let historycalArray = Object.assign([], array);
-
-    //     movies.map((movie) =>
-    //         movie.genres.find((element) => {
-    //             if (element.genre == 'история') {
-    //                 historycalArray.push(movie)
-    //             }
-    //         }
-    //         ))
-    //     setMovies(historycalArray)
-    // }
+    const ShowAll = () => {
+        fantasySetPressed(false);
+        setMovies(array)
+    }
 
     return (
         <>
@@ -54,12 +45,11 @@ function Movies({ movies }) {
                     {
                         pressed &&
                         <section className={styles.filtersBlock}>
+                            <input type='button' value='Все жанры' className={styles.filterItem} onClick={() => { OpenFilters(); ShowAll(); }} />
                             <input type='button' value='Драма' className={styles.filterItem} onClick={OpenFilters} />
                             <input type='button' value='Фентези' className={styles.filterItem} onClick={() => { OpenFilters(); ShowFantasy(); }} />
                             <input type='button' value='Военный' className={styles.filterItem} />
-                            <input type='button' value='История' className={styles.filterItem}
-                            // onClick={ShowHistorycal} 
-                            />
+                            <input type='button' value='История' className={styles.filterItem} />
                             <input type='button' value='Приключения' className={styles.filterItem} />
                         </section>
                     }
@@ -99,21 +89,7 @@ function Movies({ movies }) {
                                 )
                             }
                         </>
-
                 }
-
-
-                {/* {
-                    array.map((movie) =>
-                        <Card
-                            image={movie.posterUrl}
-                            id={movie.filmId}
-                        />
-                    )
-           
-              } */}
-
-
             </div>
         </>
     )

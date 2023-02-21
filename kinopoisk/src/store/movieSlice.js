@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     movies: [],
+    value: '',
     status: null,
     error: null
 }
@@ -31,6 +32,14 @@ const movieSlice = createSlice({
     name: 'movies',
     initialState,
     reducers: {
+        searchMovies: (value, state) => {
+            if (value = '') {
+                return state
+            }
+            else {
+                return state.filter(({ nameRu }) => nameRu.toLowerCase().includes(value.toLowerCase()))
+            }
+        }
     },
     extraReducers: {
         [fetchMovies.pending]: (state) => {
@@ -44,4 +53,5 @@ const movieSlice = createSlice({
     }
 })
 
+// export default { searchMovies } = movieSlice.actions
 export default movieSlice.reducer

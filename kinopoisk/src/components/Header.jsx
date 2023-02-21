@@ -6,9 +6,10 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-function Header() {
+function Header({ movies }) {
 
     const [pressed, setPressed] = useState(false);
+    const [value, setValue] = useState('');
 
     return (
         <header className={styles.header}>
@@ -18,7 +19,11 @@ function Header() {
                     pressed ?
                         <>
                             <div className={styles.searchActive}>
-                                <input placeholder='Название фильма, сериала' />
+                                <input
+                                    placeholder='Название фильма, сериала'
+                                    value={value}
+                                    onChange={(event) => setValue(event.target.value)}
+                                />
                                 <AiOutlineClose className={styles.closeInput} onClick={() => setPressed(!pressed)} />
                             </div>
 

@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className={styles.app}>
-        <Header />
+        <Header movies={movies} />
         <Routes>
           <Route path='/' element={<MainMenu />}></Route>
           <Route path='/movies' element={<Movies movies={movies} />}></Route>
