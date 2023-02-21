@@ -32,14 +32,14 @@ const movieSlice = createSlice({
     name: 'movies',
     initialState,
     reducers: {
-        searchMovies: (value, state) => {
-            if (value = '') {
-                return state
-            }
-            else {
-                return state.filter(({ nameRu }) => nameRu.toLowerCase().includes(value.toLowerCase()))
-            }
-        }
+        // searchMovies: (value, state) => {
+        //     if (value = '') {
+        //         return state
+        //     }
+        //     else {
+        //         return state.filter(({ nameRu }) => nameRu.toLowerCase().includes(value.toLowerCase()))
+        //     }
+        // }
     },
     extraReducers: {
         [fetchMovies.pending]: (state) => {

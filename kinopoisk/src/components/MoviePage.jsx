@@ -1,7 +1,5 @@
 import styles from './../styles/MoviePage.module.css'
-// import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
 
 function MoviePage({ movies }) {
 
@@ -9,17 +7,6 @@ function MoviePage({ movies }) {
     let { id } = useParams();
 
     const currentMovie = movies.filter((m) => m.filmId == id);
-    // const [year, setYear] = useState('');
-    // const [genres, setGenres] = useState([]);
-    // const [backgroundImage, setBackgroundImage] = useState('');
-    // const [description, setDescription] = useState('');
-
-    // useEffect(() => {
-    //     setYear(currentMovie[0].year)
-    //     setGenres(currentMovie[0].genres)
-    //     setBackgroundImage(currentMovie[0].coverUrl)
-    //     setDescription(currentMovie[0].description)
-    // }, [id])
     return (
         <div className={styles.container}>
             <div className={styles.movieDescription}>
@@ -37,8 +24,6 @@ function MoviePage({ movies }) {
             </div>
             <div className={styles.mainImage}><img src={currentMovie[0].posterUrl} alt="" /></div>
         </div>
-
-
     )
 }
 
